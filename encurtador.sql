@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19-Jul-2020 às 00:34
+-- Tempo de geração: 19-Jul-2020 às 01:06
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.4
 
@@ -36,6 +36,23 @@ CREATE TABLE `url` (
 INSERT INTO `url` (`id`, `userid`, `hits`, `url`, `shorturl`) VALUES
 (47, 'teste5', 0, 'http://www.a.com', 'http://localhost/SSOqStuPnF');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `user`
+--
+
+CREATE TABLE `user` (
+  `id` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `user`
+--
+
+INSERT INTO `user` (`id`) VALUES
+('teste5');
+
 --
 -- Índices para tabelas despejadas
 --
@@ -45,6 +62,13 @@ INSERT INTO `url` (`id`, `userid`, `hits`, `url`, `shorturl`) VALUES
 --
 ALTER TABLE `url`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
