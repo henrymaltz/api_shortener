@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Jul-2020 às 05:18
+-- Tempo de geração: 19-Jul-2020 às 00:34
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.4
 
@@ -18,43 +18,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `user`
---
-
-CREATE TABLE `user` (
-  `id` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `user`
---
-
-INSERT INTO `user` (`id`) VALUES
-('teste1');
-
---
--- Índices para tabelas despejadas
---
-
---
--- Índices para tabela `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`);
-COMMIT;
-
---
--- Estrutura da tabela `urls`
+-- Estrutura da tabela `url`
 --
 
 CREATE TABLE `url` (
   `id` int(11) NOT NULL,
-  `userid` int(11) NOT NULL,
-  `hits` int(11) NOT NULL,
+  `userid` varchar(100) NOT NULL,
+  `hits` int(11) DEFAULT NULL,
   `url` varchar(1000) NOT NULL,
   `shorturl` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `url`
+--
+
+INSERT INTO `url` (`id`, `userid`, `hits`, `url`, `shorturl`) VALUES
+(47, 'teste5', 0, 'http://www.a.com', 'http://localhost/SSOqStuPnF');
 
 --
 -- Índices para tabelas despejadas
@@ -65,7 +45,6 @@ CREATE TABLE `url` (
 --
 ALTER TABLE `url`
   ADD PRIMARY KEY (`id`);
-COMMIT;
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -75,5 +54,5 @@ COMMIT;
 -- AUTO_INCREMENT de tabela `url`
 --
 ALTER TABLE `url`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 COMMIT;

@@ -1,4 +1,4 @@
-Exemplo de API com RESTful, feito com php.
+Exemplo de API com RESTfull, feito com php.
 
 
 ------------------------------
