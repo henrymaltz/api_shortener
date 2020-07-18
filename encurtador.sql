@@ -34,7 +34,7 @@ CREATE TABLE `url` (
 --
 
 INSERT INTO `url` (`id`, `userid`, `hits`, `url`, `shorturl`) VALUES
-(47, 'teste5', 0, 'http://www.a.com', 'http://localhost/SSOqStuPnF');
+(47, 'teste5', 0, 'http://www.example.com', 'http://localhost/SSOqStuPnF');
 
 -- --------------------------------------------------------
 

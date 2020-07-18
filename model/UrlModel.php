@@ -58,19 +58,28 @@ class UrlModel extends Conexao{
             $url->bindValue('id', $id);
             $url->execute();
 
-            while ($linha = $url->fetch(PDO::FETCH_ASSOC)) {
-                $url_ret = $linha['url'];
-            }
-
             if ($url->rowCount() > 0) {
+
+                while ($linha = $url->fetch(PDO::FETCH_ASSOC)) {
+                    $url_ret = $linha['url'];
+                }
+
                 $response = array(
                     'status_code_header' => '301',
                     'body' => 'Redirect',
                     'url' => $url_ret
                 );
+
+                $sql_update = "update url set hits = hits + 1 where id = :id";
+                $update = Conexao::prepare($sql_update);
+                $update->bindValue('id', $id);
+                $update->execute();
+
             }else{
+
                 $response['status_code_header'] = '404';
                 $response['body'] = 'Not Found';
+
             }
             return $response;
 

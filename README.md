@@ -1,4 +1,14 @@
-Exemplo de API com RESTfull, feito com php.
+
+API desenvolvida para teste de uma vaga, desenvolvida conforme as regras da empresa. O objetivo principal dela é ser uma encurtadora de URL. Abaixo seguem os Endpoints que pediram no enunciando.
+
+------------------------------
+URL Redirect
+Serve para redirecionar da URL encurtada para a URL original.
+------------------------------
+Url Postman: http://localhost/api_shortener/view/Url/UrlRedirect.php 
+Exemplo de body:{"id":"teste1"}
+Positivo: 201 Created
+Negativo: 409 Conflict
 
 
 ------------------------------
