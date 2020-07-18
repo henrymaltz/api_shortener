@@ -17,7 +17,9 @@ if(!empty($data)){
     $conteudoControl = new UrlControl();
     $response = $conteudoControl->UrlRedirect($obj, $id);
     echo $response['status_code_header'] . ' ' . $response['body'];
-    header('Location:'.$response['url']);
+    if (isset($response['url']) && strlen($response['url']) > 0) {
+        header('Location:'.$response['url']);
+    }
 
 }
 
