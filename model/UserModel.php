@@ -29,20 +29,32 @@ class UserModel extends Conexao{
     }
 
     public function UserDelete($obj,$id = null){
-        $sql =  "DELETE FROM user WHERE id = :id";
+        $sql =  "DELETE FROM url WHERE userid = :id";
         $consulta = Conexao::prepare($sql);
         $consulta->bindValue('id',$id);
         try {
+
             $consulta->execute();
+            $sql =  "DELETE FROM user WHERE id = :id";
+            $consulta = Conexao::prepare($sql);
+            $consulta->bindValue('id',$id);
+            try {
+
+                $consulta->execute();
+            } catch (Exception $e) {
+            }
+
+            if ($consulta->rowCount() > 0){
+                $response['status_code_header'] = '204';
+                $response['body'] = 'No Content';
+            }else{
+                $response['status_code_header'] = '409';
+                $response['body'] = 'Null';
+            }
+
         } catch (Exception $e) {
         }
-        if ($consulta->rowCount() > 0){
-            $response['status_code_header'] = '204';
-            $response['body'] = 'No Content';
-        }else{
-            $response['status_code_header'] = '409';
-            $response['body'] = 'Null';
-        }
+
         return $response;
     }
 

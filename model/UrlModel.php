@@ -174,7 +174,7 @@ class UrlModel extends Conexao{
 
     public function UrlStats1($obj){
 
-        $sql_stats1 = "select sum(hits), count(id) FROM url";
+        $sql_stats1 = "select sum(hits) hits, count(id) urlCount FROM url";
         $stats1 = Conexao::prepare($sql_stats1);
         $stats1->execute();
 
