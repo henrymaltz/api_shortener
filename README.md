@@ -4,6 +4,9 @@
 ## Descrição do Projeto
 <p align="justify"> API desenvolvida para teste de uma vaga, desenvolvida conforme as regras da empresa. O objetivo principal dela é ser uma encurtadora de URL.</p>
 
+## Linguagens e libs utilizadas
+<p align="justify">PHP e Mysql utilizando padrão MVC.</p>
+
 ### Lista dos Endpoints que compõe a API.
 
 ------------------------------
