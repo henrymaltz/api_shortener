@@ -1,8 +1,13 @@
+# API encurtadora de URL
 
-API desenvolvida para teste de uma vaga, desenvolvida conforme as regras da empresa. O objetivo principal dela é ser uma encurtadora de URL. Abaixo seguem os Endpoints que pediram no enunciando.
+
+## Descrição do Projeto
+<p align="justify"> API desenvolvida para teste de uma vaga, desenvolvida conforme as regras da empresa. O objetivo principal dela é ser uma encurtadora de URL.</p>
+
+### Lista dos Endpoints que compõe a API.
 
 ------------------------------
-1- URL Redirect
+1. URL Redirect
 Redireciona a URL encurtada para a URL original
 ------------------------------
 Url Postman: http://localhost/api_shortener/view/Url/UrlRedirect.php 
@@ -11,7 +16,7 @@ Positivo: 301 redirect
 Negativo: 404 Not Found
 
 ------------------------------
-2- User Insert
+2. User Insert
 Cadastra um novo usuário no sistema
 ------------------------------
 url: http://localhost/api_shortener/view/User/UserInsert.php
@@ -20,7 +25,7 @@ Positivo: 201 Created
 Negativo: 409 Conflict
 
 ------------------------------
-3- Url Insert
+3. Url Insert
 Cadastra uma nova Url no sistema
 ------------------------------
 url: http://localhost/api_shortener/view/Url/UrlInsert.php
@@ -33,7 +38,7 @@ Positivo: "201""Created"
 Negativo: 100 Usuário Inexistente
 
 ------------------------------
-4- User Stats
+4. User Stats
 Retorna todas urls de um determinado usuário
 ------------------------------
 url: http://localhost/api_shortener/view/User/UserStats.php
@@ -42,7 +47,7 @@ Positivo: {"id":"47","userid":"teste5","hits":"5","url":"http://www.example.com"
 Negativo: "404""Not Found"
 
 ------------------------------
-5- Url Delete
+5. Url Delete
 Apaga uma url
 ------------------------------
 url: http://localhost/api_shortener/view/User/UserStats.php
@@ -51,7 +56,7 @@ Positivo: 204 No Content
 Negativo: 409 Null
 
 ------------------------------
-6- User Delete
+6. User Delete
 Apaga um usuário e também todas urls relacionadas a este usuário
 ------------------------------
 url: http://localhost/api_shortener/view/User/UserDelete.php
@@ -60,7 +65,7 @@ Positivo: 204 No Content
 Negativo: 409 Null
 
 ------------------------------
-7- Url Stats
+7. Url Stats
 Retorna dados de uma determinada url
 ------------------------------
 url: http://localhost/api_shortener/view/Url/UrlStatsId.php
@@ -69,7 +74,7 @@ Positivo: {"id":"48","userid":"teste5","hits":"0","url":"http://www.a.com","shor
 Negativo: "404""Not Found"
 
 ------------------------------
-8- Url Global Stats
+8. Url Global Stats
 Retorna dados de todas urls cadastradas
 ------------------------------
 url: http://localhost/api_shortener/view/Url/UrlStats.php
