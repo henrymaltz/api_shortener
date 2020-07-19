@@ -10,7 +10,7 @@ if(!empty($data)){
     $response = $control->UrlInsert($obj);
 
     foreach($response as $valor){
-        echo json_encode($valor);
+        echo json_encode($valor, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
     }
 
 }

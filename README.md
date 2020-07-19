@@ -22,16 +22,20 @@ Negativo: 409 Conflict
 ------------------------------
 Users Delete
 ------------------------------
-url: http://localhost/redevistorias/view/Users/users_delete.php
+url: http://localhost/api_shortener/view/User/UserDelete.php
 Exemplo de chamada:{"id":"teste1"}
 Positivo: 204 No Content
 Negativo: 409 Null
 
 ------------------------------
-Url Delete
+Url Insert
 ------------------------------
-url: http://localhost/redevistorias/view/Url/UrlDelete.php
-Exemplo de chamada:{"id":"2"}
-Positivo: 204 No Content
-Negativo: 409 Null
+url: http://localhost/api_shortener/view/Url/UrlInsert.php
+Exemplo de chamada:
+{
+ "userid": "teste5",
+ "url": "http://www.example.com"
+}
+Positivo: "201""Created"
+Negativo: 100 Usuário Inexistente
 
